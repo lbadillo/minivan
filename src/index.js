@@ -13,7 +13,7 @@ root.render(
     <BrowserRouter>
       <header>
         <Link className="site-logo" to="/">
-          #VanLife
+          #VanLife2
         </Link>
         <nav>
           <Link to="/about">About</Link>
