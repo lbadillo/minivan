@@ -10,7 +10,7 @@ import {
 } from 'firebase/firestore/lite';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBZMvXOOTIZuenbgtnmQ0uZRGQLLye10go',
+  apiKey: process.env.REACT_APP_FIREBASE,
   authDomain: 'vanlife-4f9ff.firebaseapp.com',
   projectId: 'vanlife-4f9ff',
   storageBucket: 'vanlife-4f9ff.firebasestorage.app',
@@ -53,17 +53,6 @@ export async function getHostVans() {
   }));
   return vans;
 }
-/*
-export async function getHostVans(id) {
-  const url = id ? `/api/host/vans/${id}` : '/api/host/vans';
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw new Error('Failed to fetch vans');
-  }
-  const data = await res.json();
-  return data.vans;
-}
-  */
 
 export async function loginUser(creds) {
   const res = await fetch('/api/login', {
