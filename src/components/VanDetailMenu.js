@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default function HostHeader() {
+export default function VanDetailMenu() {
   const activestyle = {
     fontWeight: 'bold',
     textDecoration: 'underline',
@@ -10,31 +10,25 @@ export default function HostHeader() {
 
   return (
     <>
-      <nav className="host-nav">
+      <nav className="host-van-detail-nav">
         <NavLink
           style={({ isActive }) => (isActive ? activestyle : null)}
           to="."
           end
         >
-          Dashboard
+          Details
         </NavLink>
         <NavLink
           style={({ isActive }) => (isActive ? activestyle : null)}
-          to="income"
+          to="pricing"
         >
-          Income
+          Pricing
         </NavLink>
         <NavLink
           style={({ isActive }) => (isActive ? activestyle : null)}
-          to="vans"
+          to="photos"
         >
-          Vans
-        </NavLink>
-        <NavLink
-          style={({ isActive }) => (isActive ? activestyle : null)}
-          to="reviews"
-        >
-          Reviews
+          Photos
         </NavLink>
       </nav>
     </>
